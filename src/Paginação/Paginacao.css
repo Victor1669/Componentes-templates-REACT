@@ -1,0 +1,32 @@
+#pagiCont {
+  position: absolute;
+  width: 100vw;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+
+  cursor: pointer;
+  margin: 0;
+}
+.botao {
+  list-style-type: none;
+  width: auto;
+  height: 40px;
+  padding: 25px;
+  background-color: aliceblue;
+  border: 2px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    text-decoration: none;
+    background: lightgray;
+  }
+}
+#selected {
+  background: dodgerblue;
+}

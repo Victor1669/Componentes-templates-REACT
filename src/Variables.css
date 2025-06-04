@@ -1,0 +1,10 @@
+:root {
+  /* DIVS */
+  --elementsDefaultBack: rgb(45, 52, 73);
+  --elementsDefaultBorder: 2px solid rgb(48, 53, 69);
+  --elementsDefaultActive: rgb(240, 93, 82);
+  --elementsDefaultBorderActive: 2px double var(--elementsDefaultActive);
+
+  /* ESPAÇAMENTO */
+  --spacement: 17px;
+}
