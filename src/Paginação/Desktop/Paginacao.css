@@ -1,0 +1,48 @@
+:root {
+  --pagiHeight: 40px;
+  --pagiBorder: 2px solid black;
+
+  --pageButtonSize: 60px;
+
+  --changePageButtonSpace: 10px;
+
+  --foreColor: black;
+}
+
+#pagiCont {
+  display: flex;
+  justify-content: center;
+}
+
+.changePageButton {
+  padding: var(--changePageButtonSpace);
+}
+.listLinks {
+  height: var(--pagiHeight);
+  width: 100vw;
+
+  display: flex;
+
+  margin: 0;
+  * {
+    border: var(--pagiBorder);
+    color: var(--foreColor);
+    cursor: pointer;
+    background-color: aliceblue;
+    text-decoration: none;
+    &:hover {
+      background: lightgray;
+    }
+  }
+}
+.botao {
+  width: var(--pageButtonSize);
+  padding: 5px;
+  box-sizing: content-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  list-style-type: none;
+}
