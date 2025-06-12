@@ -1,6 +1,8 @@
 :root {
   --mobilePagiHeight: 75px;
   --mobilePagiBorder: 2px solid blue;
+  --mobilePagiBack: gray;
+  --mobilePagiActive: maroon;
 
   --mobilePageButtonSize: 75px;
 
@@ -26,15 +28,12 @@
   * {
     border: var(--mobilePagiBorder);
     color: var(--mobileForeColor);
+    background: var(--mobilePagiBack);
     cursor: pointer;
-    background-color: aliceblue;
     text-decoration: none;
-    &:hover {
-      background: lightgray;
-    }
   }
 }
-.mobileBotao {
+.mobilePageButton {
   width: var(--mobilePageButtonSize);
   padding: 5px;
   box-sizing: content-box;
@@ -44,4 +43,7 @@
   justify-content: center;
 
   list-style-type: none;
+}
+.mobilePageButtonActive {
+  background: var(--mobilePagiActive);
 }

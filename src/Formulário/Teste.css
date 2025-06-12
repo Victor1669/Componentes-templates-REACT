@@ -1,0 +1,82 @@
+:root {
+  /* CONTAINER */
+  --formFontSize: 18px;
+  --formFontFamily: "Times new Roman";
+  --formContWidth: 40vw;
+  --formContHeight: 80vh;
+  --formContMinWidth: 400px;
+  --formContBack: gray;
+
+  /* ERROR MESSAGE */
+  --errorFontSize: 0.9rem;
+  --errorForeColor: red;
+
+  /* SUBMIT BUTTON */
+  --submitBack: dodgerblue;
+  --submitForeColor: white;
+  --submitBorder: 2px groove black;
+  --submitBorderRadius: 10px;
+}
+
+.formCont {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.formLogin {
+  transition: 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: var(--formContHeight);
+  width: var(--formContWidth);
+  min-width: var(--formContMinWidth);
+  background: var(--formContBack);
+  font-size: var(--formFontSize);
+  font-family: var(--formFontFamily);
+
+  button {
+    padding: 15px;
+    background: var(--submitBack);
+    color: var(--submitForeColor);
+    border: var(--submitBorder);
+    border-radius: var(--submitBorderRadius);
+    margin: 20px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.formLogo {
+  margin: 50px 0 40px 0;
+}
+.fieldCont {
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+
+  label {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+  }
+  input {
+    padding: 5px;
+    border: 1px solid black;
+    &:focus {
+      outline-style: groove;
+    }
+  }
+}
+.inputErrorSpan {
+  color: var(--errorForeColor);
+  height: 1rem;
+  margin: 5px 0 15px 0;
+  font-size: var(--errorFontSize);
+}

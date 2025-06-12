@@ -1,8 +1,10 @@
 :root {
   --pagiHeight: 40px;
   --pagiBorder: 2px solid black;
+  --pagiBack: aliceblue;
+  --pagiActive: gray;
 
-  --pageButtonSize: 60px;
+  --pageButtonSize: 75px;
 
   --changePageButtonSpace: 10px;
 
@@ -27,15 +29,12 @@
   * {
     border: var(--pagiBorder);
     color: var(--foreColor);
+    background-color: var(--pagiBack);
     cursor: pointer;
-    background-color: aliceblue;
     text-decoration: none;
-    &:hover {
-      background: lightgray;
-    }
   }
 }
-.botao {
+.pageButton {
   width: var(--pageButtonSize);
   padding: 5px;
   box-sizing: content-box;
@@ -45,4 +44,7 @@
   justify-content: center;
 
   list-style-type: none;
+}
+.pageButtonActive {
+  background: var(--pagiActive);
 }

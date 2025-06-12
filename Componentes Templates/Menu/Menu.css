@@ -1,0 +1,61 @@
+:root {
+  --menuWidth: 18vw;
+  --menuRight: calc(-1 * var(--menuWidth));
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.menuCont {
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: 18vw;
+  grid-template-areas: "menuContent";
+  gap: 10px;
+
+  width: var(--menuWidth);
+  height: 100vh;
+  background: gray;
+
+  position: absolute;
+  top: 0;
+  right: var(--menuRight);
+  a {
+    width: 80%;
+  }
+}
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.menuActive {
+  translate: -18vw 0;
+}
+.settingButton {
+  background: transparent url(./configurações.png) center no-repeat;
+  background-size: 75px;
+  cursor: pointer;
+
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:nth-child(1) {
+    margin: 30px 0;
+  }
+  &:nth-child(2) {
+    position: absolute !important;
+    right: 100px;
+    top: 100px;
+  }
+}

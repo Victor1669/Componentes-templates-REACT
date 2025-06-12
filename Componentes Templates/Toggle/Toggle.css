@@ -6,10 +6,12 @@
   --toggleWidth: 40px;
   --toggleBack: rgba(50, 50, 50, 0.15);
   --toggleBorder: 1px solid black;
+  --toggleBorderRadius: calc(var(--toggleHeight) / 2);
 
-  --ballSize: calc(var(--toggleHeight) - var(--ballDist));
-  --ballSilde: calc(var(--toggleHeight) - var(--ballDist));
-  --ballDist: 2px;
+  --ballSize: calc(var(--toggleHeight) - 2 * var(--ballDist));
+  --ballSilde: calc(var(--toggleWidth) - var(--ballSize) - 4 * var(--ballDist));
+  --ballBack: gray;
+  --ballDist: 1px;
 }
 /* CONTAINER */
 .switch {
@@ -48,7 +50,9 @@
   /**/
   background-color: var(--toggleBack);
   transition: var(--transition);
-  border-radius: 34px;
+  border-radius: var(--toggleBorderRadius);
+  margin-left: 100px;
+  scale: 1;
   /* BOLINHA */
   &:before {
     position: absolute;
@@ -56,9 +60,9 @@
     /* MEDIDAS DA BOLINHA */
     height: var(--ballSize);
     width: var(--ballSize);
-    left: var(--ballDist);
     transition: var(--transition);
-    background-color: white;
+    background: var(--ballBack);
+    translate: var(--ballDist);
     border-radius: 50%;
   }
 }
