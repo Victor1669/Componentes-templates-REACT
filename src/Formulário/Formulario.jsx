@@ -22,6 +22,7 @@ const schema = yup
   .required();
 
 import "./Teste.css";
+import formLogo from "./formulario-de-registro.png";
 
 export default function Formulario() {
   const {
@@ -45,11 +46,7 @@ export default function Formulario() {
         className="formLogin"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <img
-          className="formLogo"
-          width={75}
-          src="../../Componentes baixados/formulario-de-registro.png"
-        ></img>
+        <img className="formLogo" width={75} src={formLogo}></img>
         <div className="fieldCont">
           <label>
             Digite seu nome:
