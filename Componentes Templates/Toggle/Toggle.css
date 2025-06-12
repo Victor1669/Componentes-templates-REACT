@@ -51,7 +51,6 @@
   background-color: var(--toggleBack);
   transition: var(--transition);
   border-radius: var(--toggleBorderRadius);
-  margin-left: 100px;
   scale: 1;
   /* BOLINHA */
   &:before {
